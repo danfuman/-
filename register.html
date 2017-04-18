@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+//        function stringToHex(s) {
+//
+//            var r = "";
+//
+//            var hexes = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
+//
+//            for (var i = 0; i < (s.length) ; i++) {
+//                r += hexes[s.charCodeAt(i) >> 4] + hexes[s.charCodeAt(i) & 0xf];
+//            }
+//
+//            return r;
+//
+//        }
+//        //获取验证码
+//        function SendCode(code) {
+//            var Mobile = $("#Mobile").val();
+//            //记录到缓存
+//            $.ActionFn.SetlocalStorage("yzmMobile", Mobile);
+//            if (Mobile == '') {
+//                mui.toast('请输入手机号！');
+//                return;
+//            }
+//
+//            if (Mobile.length != 11) {
+//                mui.toast('手机号格式不对，请核实！');
+//                return;
+//            }
+//            var GetForgotsObject = new Object();
+//            time(code);
+//            //随机生成4位数
+//            for (var i = 0; i < 4; i++) {
+//                VerificationCode += Math.floor(Math.random() * 10);
+//            }
+//            var GetForgotObject = new Object();
+//            var ForgotNewData = new Date();
+//            var ForgotYear = ForgotNewData.getFullYear();
+//            var ForgotMonth = ForgotNewData.getMonth() + 1;
+//            if (ForgotMonth >= 1 && ForgotMonth <= 9) {
+//                ForgotMonth = '0' + ForgotMonth;
+//            }
+//            var ForgotDate = ForgotNewData.getDate();
+//            if (ForgotDate >= 0 && ForgotDate <= 9) {
+//                ForgotDate = '0' + ForgotDate;
+//            }
+//            var ForgotHours = ForgotNewData.getHours();
+//            if (ForgotHours >= 0 && ForgotHours <= 9) {
+//                ForgotHours = '0' + ForgotHours;
+//            }
+//            var ForgotMinutes = ForgotNewData.getMinutes();
+//            if (ForgotMinutes >= 0 && ForgotMinutes <= 9) {
+//                ForgotMinutes = '0' + ForgotMinutes;
+//            }
+//            var ForgotSeconds = ForgotNewData.getSeconds();
+//            if (ForgotSeconds >= 0 && ForgotSeconds <= 9) {
+//                ForgotSeconds = '0' + ForgotSeconds;
+//            }
+//            var ForgotCurrentdate = ForgotYear.toString() + ForgotMonth.toString() + ForgotDate.toString() + ForgotHours.toString() + ForgotMinutes.toString() + ForgotSeconds.toString();
+//            //时间戳
+//            GetForgotsObject.TimeStamp = ForgotCurrentdate;
+//            //短信内容加密方式
+//            GetForgotsObject.EncryptType = 0;
+//            //单位编码
+//            GetForgotsObject.Dcode = 'bubu100';
+//            //Md5密钥
+//            GetForgotsObject.Signed = hex_md5(ForgotCurrentdate + GetForgotsObject.Dcode).toUpperCase()
+//            //请求内容
+//            var ListForgotObj = new Object();
+//
+//            var RequestForgotj = '{ "ListObj": [{ "phone": "' + Mobile + '", "content": "【恰客驿】您正在申请手机修改服务，验证码为：' + VerificationCode + '（有效时长5分钟），如非本人操作请忽略此信息。" }] }';
+//
+//            GetForgotsObject.Request = stringToHex(des(GetForgotsObject.TimeStamp, RequestForgotj, 1, 0));
+//
+//            var ForgotobjStr = $.ActionFn.Serialize(GetForgotsObject);
+//            var xurl = 'http://xxxx:8914/Receive.aspx?Info=' + ForgotobjStr;
+//            $.ajax({
+//                type: 'post',
+//                url: xurl,
+//                dataType: 'json',
+//                success: function (Data) {
+//                    if (Data.Rtn_Code == '0') {
+//
+//                    } else {
+//                        mui.toast('获取验证码失败!');
+//                        clearTimeout(timer);
+//                        RegisteredNum = '';
+//                        $('.yzm').text('获取验证码');
+//                        $('.yzm').attr('disabled', false);
+//                        RegisteredWait = 300;
+//                        return;
+//                    }
+//                },
+//                error: function () {
+//                    mui.toast('获取验证码失败!');
+//                    clearTimeout(timer);
+//                    RegisteredNum = '';
+//                    $('.yzm').text('获取验证码');
+//                    $('.yzm').attr('disabled', false);
+//                    RegisteredWait = 300;
+//                    return;
+//                }
+//            });
+//        }
+//        var OverTime = 300;
+//        //验证码
+//        var VerificationCode = '';
+//        //定时器方法
+//        var timer;
+//        //60秒 倒计时
+//        function time(data) {
+//            if (OverTime == 0) {
+//                data.removeAttribute("disabled");
+//                data.value = "获取验证码";
+//                OverTime = 300;
+//                VerificationCode = '';
+//            } else {
+//                data.setAttribute("disabled", true);
+//                data.value = "重新发送(" + OverTime + ")";
+//                OverTime--;
+//                timer = setTimeout(function () {
+//                    time(data)
+//                }, 1000)
+//            }
+//        }
+    </script>
+</head>
+<body>
+<div class="register">
+    <form>
+        <div>
+            <input type="text" placeholder="请输入手机号码" id="Mobile"/>
+            <i class="tb fa fa-user"></i>
+            <span class="yzm">获取验证码</span>
+        </div>
+        <div>
+            <input type="text" placeholder="请输入验证码"/>
+            <i class="tb fa fa-key"></i>
+        </div>
+        <div>
+            <input type="text" placeholder="请输入密码"/>
+            <i class="tb fa fa-key"></i>
+        </div>
+    </form>
+    <button class="button_a">注册</button>
+    <a href="login.html" > <button class="button_b">已有帐号</button></a>
+
+</div>
+</body>
+</html>

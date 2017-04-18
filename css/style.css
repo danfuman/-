@@ -1,0 +1,76 @@
+li{list-style:none;}
+a{text-decoration:none;}
+img{border:0;}
+/*input{border:0;outline: none;}*/
+body{font:Arial "微软雅黑";}
+.clear{clear:both;}
+
+i{font-style: normal;}
+.clearfix:after{content:'';display: block;height:0;clear: both;}
+html,body{
+    width: 100%;
+}
+/*    登录  注册 */
+.login,.register{
+    min-height: 100vh;
+    max-width:350px;
+    border: 1px solid #3c3c3c;
+}
+.login .logo{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+form{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+form input{
+    width:85%;
+    height:30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left:15%;
+
+}
+form div{
+    position: relative;
+    width:75%;
+    height:30px;
+    margin:20px auto;
+}
+.yzm{
+    font-size: 12px;
+    position: absolute;
+    right:10px;
+    top:6px;
+    width:70px;
+    height:22px;
+    background: orangered;
+    color:#fff;
+    line-height:22px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+.tb{position: absolute;left:7px;top:9px;}
+.button_a,.button_b{
+    width:85%;
+    margin: 0 auto;
+    display: block;
+    height:35px;
+    border-radius: 5px;
+    background: #fff;
+    border: 0;
+    color:#fff;
+    cursor: pointer;
+}
+.button_a{background: orangered;margin-bottom: 20px;}
+.button_b{background: orange}
+
+
+
+
+

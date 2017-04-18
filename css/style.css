@@ -13,7 +13,7 @@ html,body{
 /*    登录  注册 */
 .login,.register{
     min-height: 100vh;
-    max-width:350px;
+    
     border: 1px solid #3c3c3c;
 }
 .login .logo{

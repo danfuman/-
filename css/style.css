@@ -11,10 +11,7 @@ html,body{
     width: 100%;
 }
 /*    登录  注册 */
-.login,.register{
-    min-height: 100vh;
-    border: 1px solid #3c3c3c;
-}
+
 .login .logo{
     margin: 0 auto;
     display: block;
